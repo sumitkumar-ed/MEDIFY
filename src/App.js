@@ -1,14 +1,21 @@
-import logo from "./assets/app/logo.png";
-import brand from "./assets/app/brand.png";
+import Nav from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { Outlet } from "react-router-dom";
+import StyledEngineProvider from "@mui/material/StyledEngineProvider";
+
 import "./App.css";
 
 function App() {
+  // const [data, setData] = useState{()};
   return (
-    <div className="App">
-      <h1>Updated</h1>
-      <img src={logo} alt="logo" />
-      <img src={brand} alt="brand"  width={100}/>
-    </div>
+    <>
+      <StyledEngineProvider injectFirst>
+        <Nav />
+        <Outlet />
+        {/* <Outlet context={{ data: {topAlbums, newAlbums, songs} }} /> */}
+        <Footer />
+      </StyledEngineProvider>
+    </>
   );
 }
 
