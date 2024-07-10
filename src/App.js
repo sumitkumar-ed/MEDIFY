@@ -8,14 +8,16 @@ import "./App.css";
 function App() {
   // const [data, setData] = useState{()};
   return (
-    <>
-      <StyledEngineProvider injectFirst>
+    <StyledEngineProvider injectFirst>
+      <div className="app-container">
         <Nav />
-        <Outlet />
-        {/* <Outlet context={{ data: {topAlbums, newAlbums, songs} }} /> */}
+        <div className="app-content">
+          <Outlet />
+          {/* <Outlet context={{ data: {topAlbums, newAlbums, songs} }} /> */}
+        </div>
         <Footer />
-      </StyledEngineProvider>
-    </>
+      </div>
+    </StyledEngineProvider>
   );
 }
 

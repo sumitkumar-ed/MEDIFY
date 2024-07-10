@@ -1,70 +1,88 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import brandImage from "../../assets/app/brand.png";
 import { Button } from "@mui/material"; // Import Button from Material-UI
 import "./Navbar.css";
 
 const NavBar = () => {
   const [activeNavItem, setActiveNavItem] = useState(null);
+  const location = useLocation();
 
   const handleNavItemClick = (item) => {
     setActiveNavItem(item);
-    // Additional logic if needed, such as navigating to the clicked item
   };
 
+  const navClass = location.pathname === "/" ? "nav bg-yellow" : "nav bg-white";
+
   return (
-    <div className="nav">
+    <div className={navClass}>
       <header className="nav-top-text">
-        The health and well-being of our patients and their health care team will
-        always be our priority, so we follow the best practices for cleanliness.
+        The health and well-being of our patients and their health care team
+        will always be our priority, so we follow the best practices for
+        cleanliness.
       </header>
       <nav className="navbar-container">
         <div className="brand-container">
-          <img src={brandImage} alt="Brand Logo" />
+          <Link to="/">
+            <img src={brandImage} alt="Brand Logo" />
+          </Link>
         </div>
         <div className="nav-options-container">
           <div className="nav-options">
-            <a
-              href="#find-doctors"
-              className={`nav-link ${activeNavItem === "find-doctors" ? "active" : ""}`}
+            <Link
+              to="/detail"
+              className={`nav-link ${
+                activeNavItem === "find-doctors" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("find-doctors")}
             >
               Find Doctors
-            </a>
-            <a
-              href="#hospitals"
-              className={`nav-link ${activeNavItem === "hospitals" ? "active" : ""}`}
+            </Link>
+            <Link
+              to="#hospitals"
+              className={`nav-link ${
+                activeNavItem === "hospitals" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("hospitals")}
             >
               Hospitals
-            </a>
-            <a
-              href="#medicines"
-              className={`nav-link ${activeNavItem === "medicines" ? "active" : ""}`}
+            </Link>
+            <Link
+              to="#medicines"
+              className={`nav-link ${
+                activeNavItem === "medicines" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("medicines")}
             >
               Medicines
-            </a>
-            <a
-              href="#surgeries"
-              className={`nav-link ${activeNavItem === "surgeries" ? "active" : ""}`}
+            </Link>
+            <Link
+              to="#surgeries"
+              className={`nav-link ${
+                activeNavItem === "surgeries" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("surgeries")}
             >
               Surgeries
-            </a>
-            <a
-              href="#software"
-              className={`nav-link ${activeNavItem === "software" ? "active" : ""}`}
+            </Link>
+            <Link
+              to="#software"
+              className={`nav-link ${
+                activeNavItem === "software" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("software")}
             >
               Software for Provider
-            </a>
-            <a
-              href="#facilities"
-              className={`nav-link ${activeNavItem === "facilities" ? "active" : ""}`}
+            </Link>
+            <Link
+              to="#facilities"
+              className={`nav-link ${
+                activeNavItem === "facilities" ? "active" : ""
+              }`}
               onClick={() => handleNavItemClick("facilities")}
             >
               Facilities
-            </a>
+            </Link>
           </div>
           <Button variant="contained" color="primary" className="nav-button">
             My Bookings
@@ -72,7 +90,12 @@ const NavBar = () => {
         </div>
       </nav>
       {activeNavItem && (
-        <div className="nav-indicator" style={{ left: `calc(${calculateLeftPosition(activeNavItem)} * 16.6%)` }}></div>
+        <div
+          className="nav-indicator"
+          style={{
+            left: `calc(${calculateLeftPosition(activeNavItem)} * 16.6%)`,
+          }}
+        ></div>
       )}
     </div>
   );

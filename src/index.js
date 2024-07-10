@@ -22,6 +22,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
+import DetailPage from "./pages/DetailPage/Detail";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/detail",
+        element: <DetailPage />,
       },
     ],
   },
