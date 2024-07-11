@@ -11,7 +11,7 @@
 .hero-other {
   position: relative;
   height: 80px;
-  background-color: #2aa7ff;
+  background: linear-gradient(180deg, #2AA7FF 100%, #0C8CE5 100%);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
