@@ -6,7 +6,7 @@ import "./Footer.css";
 const Footer = () => (
   <footer>
     <div className="footer-content">
-      <div className="footer-column footer-first-column">
+      <div className="footer-first-column">
         <img src={brandImage} alt="Brand Logo" className="footer-logo" />
         <div className="footer-social">
           <a href="#facebook"><FaFacebook /></a>
@@ -18,22 +18,28 @@ const Footer = () => (
       <div className="footer-column">
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#services">Our Pricing</a></li>
+          <li><a href="#OurGallery">Our Gallery</a></li>
+          <li><a href="#contact">Appointment</a></li>
+          <li><a href="#PrivacyPolicy">Privacy Policy</a></li>
         </ul>
       </div>
       <div className="footer-column">
         <ul>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#support">Support</a></li>
+          <li><a href="#Orthology">Orthology</a></li>
+          <li><a href="#Neurology">Neurology</a></li>
+          <li><a href="#DentalCare">Dental Care</a></li>
+          <li><a href="#Opthalmology">Opthalmology</a></li>
+          <li><a href="#Cardiology">Cardiology</a></li>
         </ul>
       </div>
       <div className="footer-column">
         <ul>
-          <li><a href="#privacy">Privacy Policy</a></li>
-          <li><a href="#terms">Terms of Service</a></li>
-          <li><a href="#faq">FAQ</a></li>
+        <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Pricing</a></li>
+          <li><a href="#OurGallery">Our Gallery</a></li>
+          <li><a href="#contact">Appointment</a></li>
+          <li><a href="#PrivacyPolicy">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
