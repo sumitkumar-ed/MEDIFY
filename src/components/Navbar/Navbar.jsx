@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import brandImage from "../../assets/app/brand.png";
-import { Button } from "@mui/material"; // Import Button from Material-UI
+import { Button } from "@mui/material";
 import "./Navbar.css";
+import Hero from "../Hero/Hero";
+import Filter from "../Filter/Filter";
 
 const NavBar = () => {
   const [activeNavItem, setActiveNavItem] = useState(null);
@@ -12,16 +14,17 @@ const NavBar = () => {
     setActiveNavItem(item);
   };
 
-  const navClass = location.pathname === "/" ? "nav bg-yellow" : "nav bg-white";
+  const navClass = location.pathname === "/" ? "nav bg-gradient" : "nav bg-white";
+  const isHome = location.pathname === "/" ? true : false;
 
   return (
-    <div className={navClass}>
+    <div>
       <header className="nav-top-text">
         The health and well-being of our patients and their health care team
         will always be our priority, so we follow the best practices for
         cleanliness.
       </header>
-      <nav className="navbar-container">
+      <nav className={`navbar-container ${navClass}`}>
         <div className="brand-container">
           <Link to="/">
             <img src={brandImage} alt="Brand Logo" />
@@ -97,6 +100,8 @@ const NavBar = () => {
           }}
         ></div>
       )}
+      <Hero />
+      {/* {isHome ? <Hero /> : <Filter />} */}
     </div>
   );
 };

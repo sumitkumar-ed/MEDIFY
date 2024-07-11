@@ -4,8 +4,8 @@
   position: relative; /* Ensure relative positioning for absolute child elements */
 }
 
-.nav.bg-yellow {
-  background-color: yellow;
+.nav.bg-gradient {
+  background: linear-gradient(180deg, #E7F0FF 100%, #E8F1FF 47%);
 }
 
 .nav.bg-white {

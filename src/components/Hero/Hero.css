@@ -1,0 +1,139 @@
+.hero-home {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #E7F0FF 100%, #E8F1FF 47%);
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+.hero-other {
+  position: relative;
+  height: 80px;
+  background-color: #2aa7ff;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.filter {
+  background-color: #fff;
+  width: 60%;
+  height: max-content;
+  position: absolute;
+
+  border-radius: 15px;
+  padding-inline: 1rem;
+  padding-block: 3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+}
+
+.filter-home {
+  bottom: -5rem;
+}
+
+.filter-other {
+  top: 2.5rem;
+}
+
+.filter-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filter-text {
+  text-align: center;
+  color: #102851;
+}
+
+.filter-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  color: #2aa7ff;
+}
+
+.input-field {
+  padding-left: 30px;
+  padding-right: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  outline: none;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  background-color: #2aa7ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1e88e5;
+}
+
+.search-icon {
+  margin-right: 5px;
+}
+
+.filter-content {
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #abb6c7;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 120px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card:hover,
+.card:active {
+  border: #1e88e5 1px solid;
+  color: #1e88e5;
+}
+
+.card-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
